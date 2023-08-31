@@ -1,0 +1,37 @@
+
+
+.lista-img-persona {
+    width: 40%;
+    border-radius: 50%;
+    margin: 1rem 0;
+    border: 2px solid var(--bgBtnInicio);
+}
+
+.lista-datos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: .8rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--borderBottom);
+    text-align: left;
+}
+
+.dato {
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) { 
+    .lista-personas {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .lista-personas {
+        flex-direction: row;
+    }
+}

@@ -1,0 +1,39 @@
+.persona {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem .5rem;
+    border-bottom: 1px solid var(--borderBottom);
+}
+
+.persona-img {
+    width: 30%;
+    border-radius: 50%;
+    border: 2px solid var(--bgBtnInicio);
+}
+
+.eliminar-persona {
+    font-size: 2rem;
+    cursor: pointer;
+}   
+.eliminar-persona:hover {
+    color: var(--eliminarPersona);
+}   
+
+.persona-baja-nombre {
+    font-size: 1rem;
+    margin: 0 .2rem 0 0;
+}
+
+@media (min-width: 768px) { 
+    .persona-img {
+        width: 15%;
+    }
+    .persona-baja-nombre {
+        font-size: 2rem;
+        margin: 0 12rem 0 0;
+    }
+    .eliminar-persona {
+        font-size: 3rem;
+    } 
+}

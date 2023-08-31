@@ -1,0 +1,109 @@
+.main {
+    height: 100vh;
+    width: 100%;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+.main__titulo {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    color: var(--blanco);
+    
+}
+
+.main__btn {
+    border: none;
+    position: relative;
+    background: var(--blanco);
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    padding: 10px 30px;
+    transition: 0.5s;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+}
+
+.main__btn:hover {
+    letter-spacing: 0.25rem;
+    background-color: var(--bgBtnInicio);
+    color: var(--bgBtnInicio);
+    box-shadow: 0 0 35px var(--bgBtnInicio);
+}
+
+.main__btn::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background-color: var(--colorEspacioBtnInicio);
+}
+
+.main__btn span {
+    position: relative;
+    z-index: 1;
+}
+
+.main__btn i {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+.main__btn i::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 15px;
+    height: 4px;
+    background: var(--colorEspacioBtnInicio); 
+    transform: translateX(-50%) skew(325deg);
+    transition: 0.5s;
+}
+
+.main__btn:hover i::before {
+    width: 20px;
+    left: 20%;
+}
+
+.main__btn i::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 15px;
+    height: 4px;
+    background: var(--colorEspacioBtnInicio); 
+    transform: translateX(-50%) skew(325deg);
+    transition: 0.5s;
+}
+
+.main__btn:hover i::after {
+    width: 20px;
+    left: 80%;
+}
+
+@media (min-width: 1024px) { 
+    .main {
+        background-position: center;
+    }
+    
+    .main__titulo {
+        font-size: 5rem;
+    }
+    
+    .main__btn {
+        padding: 1rem 5rem;
+        font-size: 20px;
+    }
+}

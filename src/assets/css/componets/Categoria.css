@@ -1,0 +1,46 @@
+.categoria {
+    width: 100vw;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categoria__container {
+    width: 100%;
+    height: 100%;
+    background: red;
+}
+
+.opcion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 17rem;
+    background: var(--blanco);
+    padding: 1rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+
+.icon-down {
+    cursor: pointer;
+}
+
+
+
+@media (min-width: 768px) { 
+
+    .opcion {
+        width: 40rem;
+    }
+}
+
+@media (min-width: 1024px) { 
+
+    .opcion {
+        padding: 1.5rem;
+        font-size: 1.5rem;
+    }
+}

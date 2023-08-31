@@ -1,0 +1,37 @@
+@import url(reset.css);
+@import url(variables.css);
+
+html {
+  font-size: 16px; /* 1rem = 10px */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gluten', cursive;
+  font-family: 'Inter', sans-serif;
+}
+
+
+
+.flex--center {
+  display: flex;
+  justify-content: center;
+} 
+
+
+  @media (min-width: 800px) {
+    .container {
+      padding-right: 2.5rem;
+      padding-left: 2.5rem;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      padding-left: calc((100vw - 900px) / 2);
+      padding-right: calc((100vw - 900px) / 2);
+    }
+  }
+  

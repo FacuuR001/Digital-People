@@ -1,0 +1,29 @@
+.opcion-swap {
+    background: var(--blanco);
+    padding: 1rem;
+    width: 17rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    text-align: center;
+}
+
+.btn-dar-alta {
+    margin-top: 1rem;
+    padding: .5rem 2rem;
+    border: none;
+    outline: none;
+    background: #064cdf;
+    color: var(--blanco);
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: .3rem;
+}
+
+@media (min-width: 768px) { 
+
+    .opcion-swap {
+        width: 40rem;
+    }
+}
