@@ -5,8 +5,9 @@ import ListaDePersonas from './ListaDePersonas';
 import BajaPersona from './BajaPersona';
 import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai';
 
-const Categoria = ({ contenido }) => {
+const Categoria = ({ contenido, personas, manejarEliminarPersona, manejarNuevaPersona }) => {
     const [swap, setSwap] = useState(false);
+
 
     const toggleOpen = () => {
         setSwap(!swap);
@@ -16,13 +17,13 @@ const Categoria = ({ contenido }) => {
 
     switch (contenido) {
         case 'alta':
-            componente = <FormularioDeAlta />;
+            componente = <FormularioDeAlta manejarNuevaPersona={manejarNuevaPersona}/>;
             break;
         case 'baja':
-            componente = <BajaPersona />;
+            componente = <BajaPersona personas={personas} manejarEliminarPersona={manejarEliminarPersona}/>;
             break;
         case 'lista':
-            componente = <ListaDePersonas />;
+            componente = <ListaDePersonas personas={personas}/>;
             break;
         default:
             componente = null;

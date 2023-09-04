@@ -1,0 +1,76 @@
+{
+    "personas": [
+        {
+            "id": "1",
+            "DNI": "12345678A",
+            "Nombre": "Juan",
+            "Apellido": "Pérez",
+            "Foto": "https://github.com/FacuuR001.png",
+            "FechaNacimiento": "1985-05-15",
+            "EdadActual": 38,
+            "CiudadResidencia": "Ciudad Ejemplo",
+            "DireccionPostal": "Calle Principal 123",
+            "CorreoElectronico": "juan.perez@example.com",
+            "Telefono": "123-456-789",
+            "ViveFallecio": "Vive"
+        },
+        {
+            "id": "2",
+            "DNI": "98765432B",
+            "Nombre": "María",
+            "Apellido": "Gómez",
+            "Foto": "https://github.com/FacuuR001.png",
+            "FechaNacimiento": "1990-10-20",
+            "EdadActual": 32,
+            "CiudadResidencia": "Otra Ciudad",
+            "DireccionPostal": "Avenida Secundaria 456",
+            "CorreoElectronico": "maria.gomez@example.com",
+            "Telefono": "987-654-321",
+            "ViveFallecio": "Falleció",
+            "FechaFallecimiento": "2022-03-10"
+        },
+        {
+            "id": "3",
+            "DNI": "56789012C",
+            "Nombre": "Carlos",
+            "Apellido": "Rodríguez",
+            "Foto": "https://github.com/FacuuR001.png",
+            "FechaNacimiento": "1978-12-02",
+            "EdadActual": 44,
+            "CiudadResidencia": "Ciudad Nueva",
+            "DireccionPostal": "Calle Secundaria 789",
+            "CorreoElectronico": "carlos.rodriguez@example.com",
+            "Telefono": "567-890-123",
+            "ViveFallecio": "Vive"
+        },
+        {
+            "id": "4",
+            "DNI": "34567890D",
+            "Nombre": "Laura",
+            "Apellido": "López",
+            "Foto": "https://github.com/FacuuR001.png",
+            "FechaNacimiento": "1995-07-08",
+            "EdadActual": 28,
+            "CiudadResidencia": "Otra Ciudad Nueva",
+            "DireccionPostal": "Avenida Terciaria 234",
+            "CorreoElectronico": "laura.lopez@example.com",
+            "Telefono": "345-678-901",
+            "ViveFallecio": "Vive"
+        },
+        {
+            "id": "5",
+            "DNI": "90123456E",
+            "Nombre": "Pedro",
+            "Apellido": "Martínez",
+            "Foto": "https://github.com/FacuuR001.png",
+            "FechaNacimiento": "1980-03-25",
+            "EdadActual": 43,
+            "CiudadResidencia": "Ciudad Ejemplo",
+            "DireccionPostal": "Calle Principal 456",
+            "CorreoElectronico": "pedro.martinez@example.com",
+            "Telefono": "901-234-567",
+            "ViveFallecio": "Falleció",
+            "FechaFallecimiento": "2023-01-18"
+        }
+    ]
+}

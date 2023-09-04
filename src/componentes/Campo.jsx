@@ -1,7 +1,7 @@
 import '../assets/css/componets/Campo.css'
 
 const Campo = (props) => {
-    const { placeHolder, type, required  } = props
+    const { placeHolder, type, required, name, value, onChange  } = props;
     return (
         <div>
             <input 
@@ -9,6 +9,9 @@ const Campo = (props) => {
                 type={type} 
                 placeholder={placeHolder}
                 required={required}
+                name={name}
+                value={value}
+                onChange={onChange}
             />
 
             
