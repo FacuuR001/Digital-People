@@ -1,153 +1,107 @@
 import Campo from './Campo';
 import '../assets/css/componets/FormularioDeAlta.css'
 import Campo2 from './Campo2';
-import { useState } from 'react';
 
-const FormularioDeAlta = ({ manejarNuevaPersona }) => {
-    const [formData, setFormData] = useState({
-        nombre: "",
-        apellido: "",
-        foto: "",
-        dni: "",
-        edadActual: "",
-        fechaNacimiento: "",
-        ciudadResidencia: "",
-        direccionPostal: "",
-        correoElectronico: "",
-        telefono: "",
-        viveFallecio: "",
-        fechaFallecimiento: ""
-    });
-
-    const manejarCambioForm = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-          ...formData,
-          [name]: value,
-        });
-      };
-
-      const handleFormSubmit = async (e) => {
-        e.preventDefault();
+const FormularioDeAlta = ({ nuevaPersona, handleSubmit, handleChange }) => {
     
-        try {
-          const nuevaPersona = await manejarNuevaPersona(formData);
-          // Limpia el formulario o realiza otras acciones después de crear la persona
-          setFormData({
-            nombre: "",
-        apellido: "",
-        foto: "",
-        dni: "",
-        edadActual: "",
-        fechaNacimiento: "",
-        ciudadResidencia: "",
-        direccionPostal: "",
-        correoElectronico: "",
-        telefono: "",
-        viveFallecio: "",
-        fechaFallecimiento: ""
-          });
-        } catch (error) {
-          console.error('Error al crear la persona:', error);
-        }
-      };
-
     return (
         <section className="opcion-swap">
-            <form className='form__alta' onSubmit={manejarNuevaPersona}>
+            <form className='form__alta' onSubmit={handleSubmit}>
                 <Campo
                     placeHolder="Nombre"
                     type="text"
-                    name="nombre"
-                    value={formData.nombre}
-                    onChange={handleFormSubmit}
+                    name="Nombre"
                     required
+                    value={nuevaPersona.Nombre}
+                    onChange={handleChange}
                 />
                 <Campo
                     placeHolder="Apellido"
                     type="text"
-                    name="apellido"
-                    value={formData.apellido}
-                    onChange={handleFormSubmit}
+                    name="Apellido"
                     required
+                    value={nuevaPersona.Apellido}
+                    onChange={handleChange}
                 />
                 <Campo
                     placeHolder="Foto (Url)"
                     type="search"
-                    name="foto"
-                    value={formData.foto}
-                    onChange={handleFormSubmit}
+                    name="Foto"
                     required
+                    value={nuevaPersona.Foto}
+                    onChange={handleChange}
                 />
                 <Campo
                     placeHolder="DNI"
                     type="number"
-                    name="dni"
-                    value={formData.dni}
-                    onChange={handleFormSubmit}
+                    name="DNI"
                     required
+                    value={nuevaPersona.DNI}
+                    onChange={handleChange}
                 />
                 <Campo
                     placeHolder="Fecha de Nacimiento"
                     type="text"
-                    name="fecha de nacimiento"
-                    value={formData.fechaNacimiento}
-                    onChange={handleFormSubmit}
+                    name="FechaNacimiento"
                     required
+                    value={nuevaPersona.FechaNacimiento}
+                    onChange={handleChange}
                 />
                 <Campo
                     placeHolder="Edad Actual"
                     type="number"
-                    name="edad"
-                    value={formData.edadActual}
-                    onChange={handleFormSubmit}
+                    name="EdadActual"
                     required
+                    value={nuevaPersona.EdadActual}
+                    onChange={handleChange}
                 />
                 <Campo
                     placeHolder="Ciudad de Residencia"
                     type="text"
-                    name="ciudad"
-                    value={formData.ciudadResidencia}
-                    onChange={handleFormSubmit}
+                    name="CiudadResidencia"
                     required
+                    value={nuevaPersona.CiudadResidencia}
+                    onChange={handleChange}
                 />
                 <Campo
                     placeHolder="Direccion Postal"
                     type="number"
-                    name="codigo postal"
-                    value={formData.direccionPostal}
-                    onChange={handleFormSubmit}
+                    name="DireccionPostal"
                     required
+                    value={nuevaPersona.DireccionPostal}
+                    onChange={handleChange}
                 />
                 <Campo
                     placeHolder="E-mail"
                     type="email"
-                    name="email"
-                    value={formData.correoElectronico}
-                    onChange={handleFormSubmit}
+                    name="CorreoElectronico"
                     required
+                    value={nuevaPersona.CorreoElectronico}
+                    onChange={handleChange}
                 />
                 <Campo
                     placeHolder="Telefono"
                     type="number"
-                    name="telefono"
-                    value={formData.telefono}
-                    onChange={handleFormSubmit}
+                    name="Telefono"
                     required
+                    value={nuevaPersona.Telefono}
+                    onChange={handleChange}
                 />
                 <Campo2
-                    value={formData.viveFallecio}
-                    onChange={handleFormSubmit}
                     required
+                    name="ViveFallecio"
+                    value={nuevaPersona.ViveFallecio}
+                    onChange={handleChange}
                 />
                 <Campo
                     placeHolder="Fecha de Fallecimiento"
                     type="text"
-                    name="fecha de fallecimiento"
-                    value={formData.fechaFallecimiento}
-                    onChange={handleFormSubmit}
+                    name="FechaFallecimiento"
                     required
+                    value={nuevaPersona.FechaFallecimiento}
+                    onChange={handleChange}
                 />
+                <p className='msg-fallecido'>si selecciono fallecio ingrese la fecha de fallecimiento de la persona, de lo contrario solamente ponga "--".</p>
 
                 <input className='btn-dar-alta' type="submit" value="Dar Alta"/>
             </form>

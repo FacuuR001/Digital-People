@@ -5,7 +5,7 @@ import ListaDePersonas from './ListaDePersonas';
 import BajaPersona from './BajaPersona';
 import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai';
 
-const Categoria = ({ contenido, personas, manejarEliminarPersona, manejarNuevaPersona }) => {
+const Categoria = ({ contenido, personas, manejarEliminarPersona, handleSubmit, handleChange, nuevaPersona }) => {
     const [swap, setSwap] = useState(false);
 
 
@@ -17,7 +17,7 @@ const Categoria = ({ contenido, personas, manejarEliminarPersona, manejarNuevaPe
 
     switch (contenido) {
         case 'alta':
-            componente = <FormularioDeAlta manejarNuevaPersona={manejarNuevaPersona}/>;
+            componente = <FormularioDeAlta handleChange={handleChange} handleSubmit={handleSubmit} nuevaPersona={nuevaPersona} />;
             break;
         case 'baja':
             componente = <BajaPersona personas={personas} manejarEliminarPersona={manejarEliminarPersona}/>;

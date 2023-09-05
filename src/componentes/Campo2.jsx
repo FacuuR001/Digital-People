@@ -1,17 +1,35 @@
-import '../assets/css/componets/Campo.css'
+import React, { useState } from 'react';
+import '../assets/css/componets/Campo.css';
 
 const Campo2 = (props) => {
-    const { value, onChange  } = props;
+    const { value, onChange, name  } = props;
+
+    const opciones = ['Vive', 'Fallecio'];
+    const opcionPredeterminada = '--Vive/Fallecio--'; 
 
     return (
         <div>
-            <select className='form-campo' value={value} onChange={onChange}>
-                <option className='asd' value="1"  disabled defaultValue>--- Vive / Fallecio ---</option>
-                <option value="Vive"> Vive </option>
-                <option value="Falleciò"> Falleciò </option>
+            <select 
+                className='form-campo' 
+                value={value} 
+                name={name} 
+                onChange={e => onChange(e)}> 
+                <option defaultValue={opcionPredeterminada}>{opcionPredeterminada}</option>
+                    {opciones.map((opcion, index) => (
+                    <option key={index} value={opcion}>
+                     {opcion}
+                    </option>
+        ))}
             </select>
         </div>
     );
 }
+
+
+  
+
+  
+
+
 
 export default Campo2;

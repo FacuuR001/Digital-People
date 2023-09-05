@@ -2,25 +2,28 @@ import '../assets/css/Menu.css';
 import Categoria from "../componentes/Categoria";
 import { HiArrowUturnLeft } from 'react-icons/hi2';
 import { useNavigate  } from 'react-router-dom';
-import { obtenerPersonas, crearPersona, eliminarPersona } from "../api/api";
+import { obtenerPersonas, eliminarPersona, crearPersona } from "../api/api";
 import { useEffect, useState } from 'react';
+import { v4 as uuid } from 'uuid';
+
 
 
 const Menu = () => {
     const [personas, setPersonas] = useState([]);
     const [nuevaPersona, setNuevaPersona] = useState({
-        nombre: "",
-        apellido: "",
-        foto: "",
-        dni: "",
-        edadActual: "",
-        fechaNacimiento: "",
-        ciudadResidencia: "",
-        direccionPostal: "",
-        correoElectronico: "",
-        telefono: "",
-        viveFallecio: "",
-        fechaFallecimiento: ""
+        id: uuid(),
+        Nombre: "",
+        Apellido: "",
+        Foto: "",
+        DNI: "",
+        EdadActual: "",
+        FechaNacimiento: "",
+        CiudadResidencia: "",
+        DireccionPostal: "",
+        CorreoElectronico: "",
+        Telefono: "",
+        ViveFallecio: "",
+        FechaFallecimiento: ""
     });
 
 
@@ -31,17 +34,43 @@ const Menu = () => {
     //Obtener datos del servidor
     useEffect(() => {
         obtenerPersonas(setPersonas)
-    }, [setPersonas]);
+    }, []);
 
     //Crear una nueva persona
-    const manejarNuevaPersona = async (formData) => {
+    const handleSubmit = async (e) => {
+        e.preventDefault();
         try {
-          const nuevaPersonas = await crearPersona(formData);
-          setPersonas([...personas, nuevaPersonas]);
-          // Limpia el formulario o realiza otras acciones después de crear la persona
+            // Llama a la función de la API para crear una nueva persona
+            const nuevaPersonaCreada = await crearPersona(nuevaPersona);
+    
+            // Actualiza el estado de personas con la nueva persona creada por la API
+            setPersonas([...personas, nuevaPersonaCreada]);
+    
+            // Limpia el formulario
+            setNuevaPersona({
+                id: uuid(),
+                Nombre: "",
+                Apellido: "",
+                Foto: "",
+                DNI: "",
+                EdadActual: "",
+                FechaNacimiento: "",
+                CiudadResidencia: "",
+                DireccionPostal: "",
+                CorreoElectronico: "",
+                Telefono: "",
+                ViveFallecio: "",
+                FechaFallecimiento: ""
+            });
         } catch (error) {
-          console.error('Error al crear la persona:', error);
+            alert('Error al crear la persona');
         }
+    };
+    
+    
+      const handleChange = (e) => {
+        const { name, value } = e.target;
+        setNuevaPersona({ ...nuevaPersona, [name]: value });
       };
       
 
@@ -70,7 +99,7 @@ const Menu = () => {
             </header>
             <main className="menu"> 
                 <h1 className="titulo__menu">Menú Principal</h1>
-                <Categoria contenido='alta' manejarNuevaPersona={manejarNuevaPersona} />
+                <Categoria contenido='alta' handleSubmit={handleSubmit} handleChange={handleChange} nuevaPersona={nuevaPersona} />
                 <Categoria contenido='baja' personas={personas} manejarEliminarPersona={manejarEliminarPersona} />
                 <Categoria contenido='lista' personas={personas} />
             </main>

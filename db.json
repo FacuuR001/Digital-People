@@ -1,6 +1,51 @@
 {
   "personas": [
     {
+      "id": "d29afc01-168f-4d38-8e26-38b5b27a172d",
+      "Nombre": "Facundo",
+      "Apellido": "Rullo",
+      "Foto": "https://github.com/FacuuR001.png",
+      "DNI": "43297032",
+      "EdadActual": "22",
+      "FechaNacimiento": "08/06/2001",
+      "CiudadResidencia": "Rio Cuarto",
+      "DireccionPostal": "5800",
+      "CorreoElectronico": "facundorullo132@gmail.com",
+      "Telefono": "3515453894",
+      "ViveFallecio": "Vive",
+      "FechaFallecimiento": "--"
+    },
+    {
+      "id": "1",
+      "DNI": "12345678A",
+      "Nombre": "Juan",
+      "Apellido": "Pérez",
+      "Foto": "https://github.com/FacuuR001.png",
+      "FechaNacimiento": "1985-05-15",
+      "EdadActual": 38,
+      "CiudadResidencia": "Ciudad Ejemplo",
+      "DireccionPostal": "Calle Principal 123",
+      "CorreoElectronico": "juan.perez@example.com",
+      "Telefono": "123-456-789",
+      "ViveFallecio": "Vive",
+      "FechaFallecimiento": "--"
+    },
+    {
+      "id": "2",
+      "DNI": "98765432B",
+      "Nombre": "María",
+      "Apellido": "Gómez",
+      "Foto": "https://github.com/FacuuR001.png",
+      "FechaNacimiento": "1990-10-20",
+      "EdadActual": 32,
+      "CiudadResidencia": "Otra Ciudad",
+      "DireccionPostal": "Avenida Secundaria 456",
+      "CorreoElectronico": "maria.gomez@example.com",
+      "Telefono": "987-654-321",
+      "ViveFallecio": "Falleció",
+      "FechaFallecimiento": "2022-03-10"
+    },
+    {
       "id": "3",
       "DNI": "56789012C",
       "Nombre": "Carlos",
@@ -12,7 +57,8 @@
       "DireccionPostal": "Calle Secundaria 789",
       "CorreoElectronico": "carlos.rodriguez@example.com",
       "Telefono": "567-890-123",
-      "ViveFallecio": "Vive"
+      "ViveFallecio": "Vive",
+      "FechaFallecimiento": "--"
     },
     {
       "id": "4",
@@ -26,7 +72,8 @@
       "DireccionPostal": "Avenida Terciaria 234",
       "CorreoElectronico": "laura.lopez@example.com",
       "Telefono": "345-678-901",
-      "ViveFallecio": "Vive"
+      "ViveFallecio": "Vive",
+      "FechaFallecimiento": "--"
     },
     {
       "id": "5",
@@ -42,36 +89,6 @@
       "Telefono": "901-234-567",
       "ViveFallecio": "Falleció",
       "FechaFallecimiento": "2023-01-18"
-    },
-    {
-      "id": "4a410eb2-b8a0-457a-b5a0-ee388ce8eceb"
-    },
-    {
-      "id": "d98b1cc7-494e-4a45-b161-7aad2da22614"
-    },
-    {
-      "id": "9380ad9c-ee41-47ea-bb12-63d96508e54b"
-    },
-    {
-      "id": "f2e47b35-957c-4690-8e83-e0fd9eeaf4f2"
-    },
-    {
-      "id": "4a696ac9-5ccf-4454-aa93-12e685033951"
-    },
-    {
-      "id": "4f3b750f-1fbb-493a-9db0-030c8b7b8308"
-    },
-    {
-      "id": "e652cf85-04fe-4600-82a8-395f1226f0ba"
-    },
-    {
-      "id": "57e1bb1d-e496-4124-b4d7-2f0e561183cb"
-    },
-    {
-      "id": "5fa53325-ea20-4bcc-b7db-14736056cc80"
-    },
-    {
-      "id": "db26947b-080c-4d1e-86c2-16993229da85"
     }
   ]
 }
